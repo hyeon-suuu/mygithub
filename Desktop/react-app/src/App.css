@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px; /* 카드 사이의 간격 조정 */
+}
+
+.product-card {
+  flex: 0 0 calc(40% - 32px); /* 두 열로 나누기 위해 카드 너비를 50%로 설정, 간격 포함 */
+  box-sizing: border-box; /* 패딩 및 보더를 포함한 박스 크기 계산 */
+  margin: 16px;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    flex: 0 0 calc(100% - 32px); /* 화면이 좁아질 경우 한 열로 나열 */
+  }
+}
