@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductCard.css';
 
-const ProductCard = ({ image, brand, description, price }) => {
+function ProductCard({ product, addToCart, removeFromCart }) {
+  const [added, setAdded] = useState(false);
+
+  const handleButtonClick = () => {
+    if (added) {
+      removeFromCart(product);
+    } else {
+      addToCart(product);
+    }
+    setAdded(!added);
+  };
+
   return (
     <div className="product-card">
-      <img src={image} alt={`${brand} product`} className="product-image" />
+      <img src={product.image} alt={product.description} className="product-image" />
       <div className="product-info">
-        <h3>{brand}</h3>
-        <p>{description}</p>
-        <span className="product-price">{price}원</span>
-        <button className="product-button">담기</button>
+        <h3>{product.brand}</h3>
+        <p>{product.description}</p>
+        <p className="product-price">{product.price}원</p>
+        <button
+          onClick={handleButtonClick}
+          className={`product-button ${added ? 'added' : ''}`}
+        >
+          {added ? '담김!' : '담기'}
+        </button>
       </div>
     </div>
   );
-};
+}
 
 export default ProductCard;
-

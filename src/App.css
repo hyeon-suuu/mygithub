@@ -8,6 +8,7 @@
   display: inline-block; /* 컨테이너가 내용물에 맞춰 크기 조정 */
   max-width: 800px; /* 최대 너비 설정 */
   margin: 0 auto; /* 중앙 정렬 */
+  padding-bottom: 20px;
 }
 
 .header {
@@ -17,11 +18,40 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  position: relative; /* 숫자 배치를 위해 부모 요소에 상대 위치 설정 */
 }
 
 .header img {
   width: 30px;
   height: 30px;
+  margin-right: 20px;
+}
+
+.header h1 {
+  font-size: 3em;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  bottom: -10px; /* 하단 위치 조정 */
+  right: -10px; /* 오른쪽 위치 조정 */
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-right: 20px;
 }
 
 .description {
@@ -59,18 +89,33 @@
 }
 
 .product-card h3 {
-  font-size: 18px;
+  font-size: 1.5em; /* 폰트 크기 키우기 */
   margin: 10px;
 }
 
 .product-card p {
-  font-size: 14px;
+  font-size: 1.2em; /* 폰트 크기 키우기 */
   margin: 10px;
 }
 
 .product-card .price {
-  font-size: 16px;
+  font-size: 1.4em; /* 폰트 크기 키우기 */
   font-weight: bold;
   color: #333;
   margin: 10px;
+}
+
+.product-button {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px; /* 버튼 크기 키우기 */
+  border-radius: 10px;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.product-button:hover {
+  background-color: #444;
 }
