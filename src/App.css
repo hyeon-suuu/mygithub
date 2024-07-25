@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+.product-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: inline-block; /* 컨테이너가 내용물에 맞춰 크기 조정 */
+  max-width: 800px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding-bottom: 20px;
+}
+
+.header {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* 숫자 배치를 위해 부모 요소에 상대 위치 설정 */
+}
+
+.header img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.header h1 {
+  font-size: 3em;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  bottom: -10px; /* 하단 위치 조정 */
+  right: -10px; /* 오른쪽 위치 조정 */
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.description {
+  text-align: left;
+  padding: 0px 40px;
+  margin: 0;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px; /* 카드 사이의 간격 조정 */
+}
+
+.product-card {
+  flex: 0 0 calc(48% - 32px); /* 두 열로 나누기 위해 카드 너비를 48%로 설정, 간격 포함 */
+  box-sizing: border-box; /* 패딩 및 보더를 포함한 박스 크기 계산 */
+  margin: 0px;
+  border: 1px solid #ddd;
+  border-radius: 15px; /* 모서리를 둥글게 */
+  padding: 0px;
+  width: 100%; /* 카드의 너비를 전체로 조정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 상자 그림자 */
+  background-color: white;
+}
+
+.product-card img {
+  width: 100%;
+  margin: 0; /* 이미지의 마진 제거 */
+  border-top-left-radius: 15px; /* 이미지의 상단 모서리를 둥글게 */
+  border-top-right-radius: 15px; /* 이미지의 상단 모서리를 둥글게 */
+  border-bottom-left-radius: 0; /* 이미지의 하단 모서리를 직선으로 */
+  border-bottom-right-radius: 0; /* 이미지의 하단 모서리를 직선으로 */
+}
+
+.product-card h3 {
+  font-size: 1.5em; /* 폰트 크기 키우기 */
+  margin: 10px;
+}
+
+.product-card p {
+  font-size: 1.2em; /* 폰트 크기 키우기 */
+  margin: 10px;
+}
+
+.product-card .price {
+  font-size: 1.4em; /* 폰트 크기 키우기 */
+  font-weight: bold;
+  color: #333;
+  margin: 10px;
+}
+
+.product-button {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px; /* 버튼 크기 키우기 */
+  border-radius: 10px;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.product-button:hover {
+  background-color: #444;
+}
